@@ -8,7 +8,8 @@ before-install:
 
 script: 
     - docker run allaeddineattia/react_docker npm run test -- --coverage --watchAll=false --forceExit
-deploy: 
+
+    deploy: 
     provider: elasticbeanstalk
     region: "us-east-1"
     app: "docker-react"
