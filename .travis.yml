@@ -9,7 +9,7 @@ before-install:
 script: 
     - docker run allaeddineattia/react_docker npm run test -- --coverage --watchAll=false --forceExit
 
-    deploy: 
+deploy: 
     provider: elasticbeanstalk
     region: "us-east-1"
     app: "docker-react"
@@ -18,7 +18,7 @@ script:
     bucket_path: "docker-react"
     on:
         branch: master
-        access_key_id:
-            secure: "ASIA4KQ46T5N3VU5SS6U"
-          secret_access_key:
-            secure: "i7+13FHZm20qPdnYylmjrjnYRfi7zc5qPHYu7YGl"
+
+    access_key_id: "$AWS_ACCESS_KEY"
+    secret_access_key:
+        secure: "$AWS_SECRET_KEY"
