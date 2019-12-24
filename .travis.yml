@@ -7,4 +7,4 @@ before-install:
     - docker build -t allaeddineattia/react_docker -f Dockerfile.dev .
 
 script: 
-    - docker run allaeddineattia/react_docker npm run test -- --coverage --onlyChanged=false --forceExit
+    - docker run allaeddineattia/react_docker npm run test -- --coverage --watchAll=false --forceExit
